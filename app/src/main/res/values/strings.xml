@@ -1,26 +1,26 @@
 <resources>
-    <string name="app_name">Quizzler</string>
+    <string name="app_name">Preguntas</string>
 
-    <string name="true_button">True</string>
-    <string name="false_button">False</string>
-    <string name="initial_score">Score 0/13</string>
+    <string name="true_button">Verdadero</string>
+    <string name="false_button">Falso</string>
+    <string name="initial_score">Puntaje 0/13</string>
 
 
-    <string name="incorrect_toast">Wrong!</string>
-    <string name="correct_toast">You got it!</string>
+    <string name="incorrect_toast">Incorrecto!</string>
+    <string name="correct_toast">Correcto!</string>
 
-    <string name="question_1">Valentine\'s day is banned in Saudi Arabia.</string>
-    <string name="question_2">A slug\'s blood is green.</string>
-    <string name="question_3">Approximately one quarter of human bones are in the feet.</string>
-    <string name="question_4">The total surface area of two human lungs is approximately 70 square metres.</string>
-    <string name="question_5">In West Virginia, USA, if you accidentally hit an animal with your car, you are free to take it home to eat.</string>
-    <string name="question_6">In London, UK, if you happen to die in the House of Parliament, you are technically entitled to a state funeral, because the building is considered too sacred a place.</string>
-    <string name="question_7">It is illegal to pee in the Ocean in Portugal.</string>
-    <string name="question_8">You can lead a cow down stairs but not up stairs.</string>
-    <string name="question_9">Google was originally called \"Backrub\".</string>
-    <string name="question_10">Buzz Aldrin\'s mother\'s maiden name was \"Moon\".</string>
-    <string name="question_11">The loudest sound produced by any animal is 188 decibels. That animal is the African Elephant.</string>
-    <string name="question_12">No piece of square dry paper can be folded in half more than 7 times.</string>
-    <string name="question_13">Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.</string>
+    <string name="question_1">El día de San Valentín está prohibido en Arabia Saudita.</string>
+    <string name="question_2">La sangre de una babosa es verde.</string>
+    <string name="question_3">Aproximadamente una cuarta parte de los huesos humanos están en los pies.</string>
+    <string name="question_4">La superficie total de dos pulmones humanos es de aproximadamente 70 metros cuadrados.</string>
+    <string name="question_5">En Virginia Occidental, EE. UU., si accidentalmente golpea a un animal con su automóvil, puede llevarlo a su casa para comer.</string>
+    <string name="question_6">En Londres, Reino Unido, si mueres en la Cámara del Parlamento, técnicamente tienes derecho a un funeral de estado, porque el edificio se considera un lugar demasiado sagrado.</string>
+    <string name="question_7">Es ilegal orinar en el océano en Portugal.</string>
+    <string name="question_8">Puedes llevar a una vaca escaleras abajo pero no escaleras arriba.</string>
+    <string name="question_9">Google originalmente se llamaba \"Backrub\".</string>
+    <string name="question_10">El apellido de soltera de la madre de Buzz Aldrin era \"Moon\".</string>
+    <string name="question_11">El sonido más fuerte producido por cualquier animal es 188 decibelios. Ese animal es el elefante africano.</string>
+    <string name="question_12">Ningún pedazo de papel cuadrado seco se puede doblar por la mitad más de 7 veces.</string>
+    <string name="question_13">El chocolate afecta el corazón y el sistema nervioso de un perro\, unas pocas onzas son suficientes para matar a un perro pequeño.</string>
 
 </resources>
