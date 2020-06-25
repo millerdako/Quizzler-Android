@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
     int mIndex;
     int mScore;
     int mQuestion;
+    boolean isGameOver;
     TextView mScoreTextView;
     ProgressBar mProgressBar;
 
@@ -49,6 +50,16 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        if(savedInstanceState != null){
+            mScore = savedInstanceState.getInt("ScoreKey");
+            mIndex = savedInstanceState.getInt("IndexKey");
+            isGameOver = savedInstanceState.getBoolean("GameOverKey");
+        } else {
+            mScore = 0;
+            mIndex = 0;
+            isGameOver = false;
+        }
+
         mTrueButton = (Button) findViewById(R.id.true_button);
         mFalseButton = (Button) findViewById(R.id.false_button);
         mQuestionTextView = (TextView) findViewById(R.id.question_text_view);
@@ -57,6 +68,11 @@ public class MainActivity extends Activity {
 
         mQuestion = mQuestionBank[mIndex].getQuestionID();
         mQuestionTextView.setText(mQuestion);
+        mScoreTextView.setText("Puntaje " + mScore + "/"+mQuestionBank.length);
+
+        if(isGameOver){
+            alertShow();
+        }
 
 
         mTrueButton.setOnClickListener(new View.OnClickListener() {
@@ -81,17 +97,8 @@ public class MainActivity extends Activity {
         mIndex = (mIndex + 1) % mQuestionBank.length;
 
         if(mIndex == 0){
-            AlertDialog.Builder alert = new AlertDialog.Builder(this);
-            alert.setTitle("Game Over");
-            alert.setCancelable(false);
-            alert.setMessage("Tu puntaje es: "+ mScore + " puntos!");
-            alert.setPositiveButton("Cerrar Aplicacion", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialogInterface, int i) {
-                    finish();
-                }
-            });
-            alert.show();
+            isGameOver = true;
+            alertShow();
         }
 
         mQuestion = mQuestionBank[mIndex].getQuestionID();
@@ -109,5 +116,27 @@ public class MainActivity extends Activity {
         }else{
             Toast.makeText(getApplicationContext(), R.string.incorrect_toast, Toast.LENGTH_LONG).show();
         }
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putInt("ScoreKey", mScore);
+        outState.putInt("IndexKey", mIndex);
+        outState.putBoolean("GameOverKey", isGameOver);
+    }
+
+    public void alertShow(){
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle("Game Over");
+        alert.setCancelable(false);
+        alert.setMessage("Tu puntaje es: "+ mScore + " puntos!");
+        alert.setPositiveButton("Cerrar Aplicacion", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        alert.show();
     }
 }
